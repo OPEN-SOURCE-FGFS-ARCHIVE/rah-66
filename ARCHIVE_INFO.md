@@ -16,7 +16,7 @@ Available at [https://github.com/OPEN-SOURCE-FGFS-ARCHIVE/](https://github.com/O
 
 ### Licensing & Compliance
 
-- **Original Code & Derivatives:** Licensed under the terms of the **GNU General Public License v2 (GPL-2)** (or compatible terms matching original upstream contributions).
+- **Original Code & Derivatives:** Licensed under the terms of the **GNU General Public License v3 (GPL-3)** (or compatible terms matching original upstream contributions).
 
 - **Attribution:** All original authors, 3D modelers, FDM developers, and system contributors retain full credit. This repository does not strip author names, hide commit histories, or obscure provenance.
 
