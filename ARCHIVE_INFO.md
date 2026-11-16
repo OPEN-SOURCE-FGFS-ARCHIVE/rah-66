@@ -18,8 +18,7 @@ Run by **SP-NTX** - sp.ntx.flightgear@gmail.com
 
 ## Licensing & Compliance
 
-- **Original Code & Derivatives:** GNU GPL (or compatible upstream terms).
-- **License declared by GitHub:** GNU General Public License v3.0 (`GPL-3.0`)
+- **License:** GNU General Public License v3.0 (`GPL-3.0`)
 - **Archiving basis:** Archived under the Archive's rules: GNU GPL only, no CC-licensed content.
 - **Attribution:** All original authors, modellers, FDM and systems contributors retain full credit. Author names, commit history and provenance are preserved unchanged.
 
