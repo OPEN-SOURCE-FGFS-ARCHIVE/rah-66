@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Concept Stealth 160th SOAR(A)</name>
+				<winglets type="bool">true</winglets>
+				<radar type="bool">false</radar>
+				<cone type="bool">false</cone>
+				<stub-wings type="bool">false</stub-wings>
+				<texture>liveries/soar.png</texture>
+			</livery>
+			<livery-logo>
+				<texture>liveries/soar.png</texture>
+			</livery-logo>
+		</model>
+		
+	</sim>
+
+</PropertyList>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Concept Digital Desert Camo</name>
+				<winglets type="bool">false</winglets>
+				<radar type="bool">false</radar>
+				<cone type="bool">true</cone>
+				<stub-wings type="bool">false</stub-wings>
+				<texture>liveries/cddc.png</texture>
+			</livery>
+			<livery-logo>
+				<texture>liveries/cddc.png</texture>
+			</livery-logo>
+		</model>
+		
+	</sim>
+
+</PropertyList>

@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+
+<PropertyList>
+    <path>lights.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>10</max-m>
+    </animation>
+    
+    <animation>
+      <type>material</type>
+      <property-base>sim/model/material/cockpit</property-base>
+      <object-name>face</object-name>
+      <object-name>auto</object-name>
+      <object-name>direction</object-name>
+      <emission>
+        <red-prop>red</red-prop>
+        <green-prop>green</green-prop>
+        <blue-prop>blue</blue-prop>
+        <factor-prop>factor</factor-prop>
+      </emission>
+    </animation>
+	
+		
+	
+	
+	
+	
+	
+	
+	<model>
+        <path>Aircraft/rah-66/instruments/switches/nav.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.013</y-m>
+            <z-m>0.044</z-m>
+            <pitch-deg>0</pitch-deg>
+			<roll-deg>180</roll-deg>
+        </offsets>
+    </model>
+	
+	<model>
+        <path>Aircraft/rah-66/instruments/switches/strobe.xml</path>
+        <offsets>
+         <x-m>0</x-m>
+            <y-m>0.036</y-m>
+            <z-m>0.044</z-m>
+            <pitch-deg>0</pitch-deg>
+			<roll-deg>180</roll-deg>
+        </offsets>
+    </model>
+	
+	<model>
+        <path>Aircraft/rah-66/instruments/switches/formation.xml</path>
+        <offsets>
+             <x-m>0</x-m>
+            <y-m>-0.004</y-m>
+            <z-m>0.009</z-m>
+            <pitch-deg>0</pitch-deg>
+			<roll-deg>180</roll-deg>
+        </offsets>
+    </model>
+	
+	<model>
+        <path>Aircraft/rah-66/instruments/switches/beacon.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0.017</y-m>
+            <z-m>0.009</z-m>
+            <pitch-deg>0</pitch-deg>
+			<roll-deg>180</roll-deg>
+        </offsets>
+    </model>
+	
+	<model>
+        <path>Aircraft/rah-66/instruments/switches/landing-lights.xml</path>
+        <offsets>
+           <x-m>0</x-m>
+            <y-m>0.037</y-m>
+            <z-m>0.009</z-m>
+            <pitch-deg>0</pitch-deg>
+			<roll-deg>180</roll-deg>
+        </offsets>
+    </model>
+	
+	<!-- winch switch -->
+	
+	<model>
+        <path>Aircraft/rah-66/instruments/switches/spare.xml</path>
+        <offsets>
+             <x-m>0</x-m>
+            <y-m>-0.028</y-m>
+            <z-m>0.005</z-m>
+            <pitch-deg>0</pitch-deg>
+			<roll-deg>0</roll-deg>
+        </offsets>
+    </model>
+	
+	<!-- pitot1 -->
+	
+	<model>
+        <path>Aircraft/rah-66/instruments/switches/pitot.xml</path>
+        <offsets>
+             <x-m>0</x-m>
+            <y-m>-0.035</y-m>
+            <z-m>-0.032</z-m>
+            <pitch-deg>0</pitch-deg>
+			<roll-deg>180</roll-deg>
+        </offsets>
+    </model>
+	
+	<!-- pitot2 -->
+	
+	<model>
+        <path>Aircraft/rah-66/instruments/switches/pitot.xml</path>
+        <offsets>
+             <x-m>0</x-m>
+            <y-m>-0.014</y-m>
+            <z-m>-0.032</z-m>
+            <pitch-deg>0</pitch-deg>
+			<roll-deg>180</roll-deg>
+        </offsets>
+    </model>
+	
+		
+
+</PropertyList>

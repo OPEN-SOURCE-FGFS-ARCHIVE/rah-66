@@ -1,0 +1,1142 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!-- model -->
+
+	<path>model.ac</path>
+
+	<offsets>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>0</z-m>
+		<pitch-deg>0</pitch-deg>
+	</offsets>
+	
+<!-- versions -->
+
+	<animation>
+		<type>select</type>
+		<object-name>winglets</object-name>
+		<condition>
+			<property>sim/model/livery/winglets</property>
+			<value type="bool">false</value>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>radar</object-name>
+		<condition>
+			<property>sim/model/livery/radar</property>
+			<value type="bool">false</value>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>cone</object-name>
+		<condition>
+			<property>sim/model/livery/cone</property>
+			<value type="bool">false</value>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>stub-wings</object-name>
+		<condition>
+			<property>sim/model/livery/stub-wings</property>
+			<value type="bool">false</value>
+		</condition>
+	</animation>
+
+<!-- submodels -->
+
+	<model>
+		<path>Aircraft/rah-66/instruments/instruments.xml</path>
+	</model>
+	
+	<model>
+		<path>Aircraft/rah-66/models/panel.xml</path>
+	</model>
+	
+	<model>
+		<path>Aircraft/rah-66/models/pilot.xml</path>
+		<offsets>
+			<x-m>-3.60</x-m>
+			<y-m>0</y-m>
+			<z-m>1.85</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<condition>
+			<not>
+				<property>/sim/current-view/internal</property>
+			</not>
+		</condition>
+	</model>
+	
+	<model>
+		<path>Aircraft/rah-66/models/gunner.xml</path>
+		<offsets>
+			<x-m>-2.22</x-m>
+			<y-m>0</y-m>
+			<z-m>1.97</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<condition>
+			<not>
+				<property>/sim/current-view/internal</property>
+			</not>
+		</condition>
+	</model>
+	
+	<model>
+		<path>Aircraft/rah-66/models/equipment.xml</path>
+	</model>
+	
+	<model>
+		<path>Aircraft/rah-66/models/hellfires.xml</path>
+	</model>
+	
+<!-- liveries -->
+	
+	<nasal>
+		<load>
+			var livery_update = aircraft.livery_update.new("Aircraft/rah-66/models/liveries", 10);
+		</load>
+		<unload>
+			livery_update.stop();
+		</unload>
+	</nasal>
+
+	<animation>
+		<type>material</type>
+		<object-name>fuselage</object-name>
+		<object-name>cockpit</object-name>
+		<object-name>cone</object-name>
+		<object-name>stub-wings</object-name>
+		<object-name>arch</object-name>
+		<object-name>pilot-doors</object-name>
+		<object-name>gunner-doors</object-name>
+		<object-name>gun</object-name>
+		<object-name>turret</object-name>
+		<object-name>gear-boxes</object-name>
+		<object-name>antennas</object-name>
+		<object-name>horizontal-stabilizer</object-name>
+		<object-name>winglets</object-name>
+		<object-name>radiators</object-name>
+		<object-name>fenstron</object-name>
+		<object-name>fenstron-rode</object-name>
+		<object-name>left-pylon</object-name>
+		<object-name>right-pylon</object-name>
+		<object-name>left-gear-doors</object-name>
+		<object-name>right-gear-doors</object-name>
+		<object-name>left-tail-gear-doors</object-name>
+		<object-name>right-tail-gear-doors</object-name>
+		<object-name>left-baydoors</object-name>
+		<object-name>right-baydoors</object-name>
+		<object-name>left-landing-light</object-name>
+		<object-name>right-landing-light</object-name>
+		<object-name>left-low-strut1</object-name>
+		<object-name>right-low-strut1</object-name>
+		<object-name>left-low-strut2</object-name>
+		<object-name>right-low-strut2</object-name>
+		<object-name>left-up-strut1</object-name>
+		<object-name>right-up-strut1</object-name>
+		<object-name>left-up-strut2</object-name>
+		<object-name>right-up-strut2</object-name>
+		<object-name>left-up-strut1</object-name>
+		<object-name>tail-strut1</object-name>
+		<object-name>tail-strut2</object-name>
+		<object-name>tail-axis</object-name>
+		<object-name>tail-ring</object-name>
+		<object-name>left-wheel</object-name>
+		<object-name>right-wheel</object-name>
+		<object-name>tail-wheel</object-name>
+		<object-name>radar</object-name>
+		<object-name>rotor-axis</object-name>
+		<object-name>blade1</object-name>
+		<object-name>blade2</object-name>
+		<object-name>blade3</object-name>
+		<object-name>blade4</object-name>
+		<object-name>blade5</object-name>
+		<object-name>tail-rotor</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>liveries/default.png</texture>
+	</animation>
+	
+<!-- shaders -->
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>glass</object-name>
+		<object-name>pilot-glass</object-name>
+		<object-name>gunner-glass</object-name>
+		<object-name>rotor-disc</object-name>
+		<object-name>tail-rotor-disc</object-name>
+		<object-name>blurred1</object-name>
+		<object-name>blurred2</object-name>
+		<object-name>blurred3</object-name>
+		<object-name>blurred4</object-name>
+		<object-name>blurred5</object-name>
+	</animation>
+	
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+		<object-name>glass</object-name>
+		<object-name>gunner-glass</object-name>
+		<object-name>pilot-glass</object-name>
+	</animation>
+	
+<!-- animations -->
+
+	<!-- gun -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>gun</object-name>
+		<property>sim/model/turret-positions/turretz</property>
+		<factor>1</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-4.93</x-m>
+			<y-m>0</y-m>
+			<z-m>0.90</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>gun</object-name>
+		<object-name>turret</object-name>
+		<property>sim/model/turret-positions/turretx</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>-4.64</x-m>
+			<y-m>0</y-m>
+			<z-m>0.90</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>gun</object-name>
+		<property>controls/armament/trigger</property>
+		<factor>30</factor>
+		<axis>   
+			<x1-m>-5.86</x1-m>
+			<y1-m>0.00</y1-m>
+			<z1-m>1.05</z1-m>
+			<x2-m>-5.21</x2-m>
+			<y2-m>0.00</y2-m>
+			<z2-m>0.95</z2-m>
+		</axis>
+	</animation>
+	
+	<!-- doors -->
+	
+	<animation>
+		<type>pick</type>
+		<object-name>pilot-doors</object-name>
+		<object-name>pilot-glass</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>main.PilotDoor.toggle();</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>gunner-doors</object-name>
+		<object-name>gunner-glass</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>main.GunnerDoor.toggle();</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>pilot-doors</object-name>
+		<object-name>pilot-glass</object-name>
+		<property>sim/multiplay/generic/float[0]</property>
+		<factor>-90</factor>
+		<axis>   
+			<x1-m>-4.44</x1-m>
+			<y1-m>-0.31</y1-m>
+			<z1-m>2.15</z1-m>
+			<x2-m>-3.67</x2-m>
+			<y2-m>-0.28</y2-m>
+			<z2-m>2.69</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>gunner-doors</object-name>
+		<object-name>gunner-glass</object-name>
+		<property>sim/multiplay/generic/float[1]</property>
+		<factor>-80</factor>
+		<axis>   
+			<x1-m>-2.91</x1-m>
+			<y1-m>-0.28</y1-m>
+			<z1-m>2.82</z1-m>
+			<x2-m>-1.83</x2-m>
+			<y2-m>-0.31</y2-m>
+			<z2-m>2.83</z2-m>
+		</axis>
+	</animation>
+	
+	<!-- weapon baydoors -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>left-baydoors</object-name>
+		<property>baydoors/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.5</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>-105</dep>
+			</entry>
+		</interpolation>
+		<axis>   
+			<x1-m>-1.92</x1-m>
+			<y1-m>-0.94</y1-m>
+			<z1-m>1.59</z1-m>
+			<x2-m>0.08</x2-m>
+			<y2-m>-0.96</y2-m>
+			<z2-m>1.52</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>right-baydoors</object-name>
+		<property>baydoors/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.5</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>105</dep>
+			</entry>
+		</interpolation>
+		<axis>   
+			<x1-m>-1.92</x1-m>
+			<y1-m>0.94</y1-m>
+			<z1-m>1.59</z1-m>
+			<x2-m>0.08</x2-m>
+			<y2-m>0.96</y2-m>
+			<z2-m>1.52</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>left-pylon</object-name>
+		<property>baydoors/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>105</dep>
+			</entry>
+			<entry>
+				<ind>0.5</ind>
+				<dep>105</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<axis>   
+			<x1-m>-1.92</x1-m>
+			<y1-m>-0.94</y1-m>
+			<z1-m>1.59</z1-m>
+			<x2-m>0.08</x2-m>
+			<y2-m>-0.96</y2-m>
+			<z2-m>1.52</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>right-pylon</object-name>
+		<property>baydoors/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>-105</dep>
+			</entry>
+			<entry>
+				<ind>0.5</ind>
+				<dep>-105</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<axis>   
+			<x1-m>-1.92</x1-m>
+			<y1-m>0.94</y1-m>
+			<z1-m>1.59</z1-m>
+			<x2-m>0.08</x2-m>
+			<y2-m>0.96</y2-m>
+			<z2-m>1.52</z2-m>
+		</axis>
+	</animation>
+	
+	<!-- gear doors -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>left-gear-doors</object-name>
+		<property>gear/gear[0]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>-105</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>-105</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>-105</dep>
+			</entry>
+		</interpolation>
+		<offset-deg>0</offset-deg>
+		<axis>
+			<x1-m>-3.04</x1-m>
+			<y1-m>-0.65</y1-m>
+			<z1-m>1.22</z1-m>
+			<x2-m>-1.87</x2-m>
+			<y2-m>-0.74</y2-m>
+			<z2-m>1.15</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>right-gear-doors</object-name>
+		<property>gear/gear[1]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>105</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>105</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>105</dep>
+			</entry>
+		</interpolation>
+		<offset-deg>0</offset-deg>
+		<axis>
+			<x1-m>-3.04</x1-m>
+			<y1-m>0.65</y1-m>
+			<z1-m>1.22</z1-m>
+			<x2-m>-1.87</x2-m>
+			<y2-m>0.74</y2-m>
+			<z2-m>1.15</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>left-tail-gear-doors</object-name>
+		<property>gear/gear[2]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>-60</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>-60</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>-60</dep>
+			</entry>
+		</interpolation>
+		<offset-deg>0</offset-deg>
+		<axis>
+			<x1-m>3.58</x1-m>
+			<y1-m>-0.24</y1-m>
+			<z1-m>1.03</z1-m>
+			<x2-m>4.09</x2-m>
+			<y2-m>-0.23</y2-m>
+			<z2-m>1.00</z2-m>
+		</axis>
+	</animation>
+	
+		<animation>
+		<type>rotate</type>
+		<object-name>right-tail-gear-doors</object-name>
+		<property>gear/gear[2]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>60</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>60</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>60</dep>
+			</entry>
+		</interpolation>
+		<offset-deg>0</offset-deg>
+		<axis>
+			<x1-m>3.58</x1-m>
+			<y1-m>0.24</y1-m>
+			<z1-m>1.03</z1-m>
+			<x2-m>4.09</x2-m>
+			<y2-m>0.23</y2-m>
+			<z2-m>1.00</z2-m>
+		</axis>
+	</animation>
+	
+<!-- gear -->
+
+	<!-- left gear -->
+	
+	<animation>
+		<type>select</type>
+		<object-name>left-wheel</object-name>
+		<object-name>left-landing-light</object-name>
+		<object-name>left-low-strut1</object-name>
+		<object-name>left-low-strut2</object-name>
+		<object-name>left-up-strut1</object-name>
+		<object-name>left-up-strut2</object-name>
+		<condition>
+			<greater-than>
+				<property>gear/gear[0]/position-norm</property>
+				<value>0.0</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>left-wheel</object-name>
+		<object-name>left-landing-light</object-name>
+		<object-name>left-low-strut1</object-name>
+		<object-name>left-low-strut2</object-name>
+		<object-name>left-up-strut1</object-name>
+		<object-name>left-up-strut2</object-name>
+		<property>gear/gear[0]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>-90</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>-90</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<offset-deg>0</offset-deg>
+		<axis>
+			<x1-m>-3.05</x1-m>
+			<y1-m>-0.45</y1-m>
+			<z1-m>1.11</z1-m>   
+			<x2-m>-3.06</x2-m>
+			<y2-m>-0.39</y2-m>
+			<z2-m>1.07</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>left-low-strut2</object-name>
+		<object-name>left-up-strut2</object-name>
+		<property>gear/gear[0]/position-norm</property>
+		<factor>40</factor>
+		<offset-deg>-40</offset-deg>
+		<axis>   
+			<x1-m>-2.45</x1-m>
+			<y1-m>-0.76</y1-m>
+			<z1-m>0.60</z1-m>
+			<x2-m>-2.45</x2-m>
+			<y2-m>-0.70</y2-m>
+			<z2-m>0.58</z2-m>
+		</axis>
+	</animation>
+	
+	<!-- right gear -->
+	
+	<animation>
+		<type>select</type>
+		<object-name>right-wheel</object-name>
+		<object-name>right-landing-light</object-name>
+		<object-name>right-low-strut1</object-name>
+		<object-name>right-low-strut2</object-name>
+		<object-name>right-up-strut1</object-name>
+		<object-name>right-up-strut2</object-name>
+		<condition>
+			<greater-than>
+				<property>gear/gear[1]/position-norm</property>
+				<value>0.0</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>right-wheel</object-name>
+		<object-name>right-landing-light</object-name>
+		<object-name>right-low-strut1</object-name>
+		<object-name>right-low-strut2</object-name>
+		<object-name>right-up-strut1</object-name>
+		<object-name>right-up-strut2</object-name>
+		<property>gear/gear[1]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>90</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>90</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<offset-deg>0</offset-deg>
+		<axis>
+			<x1-m>-3.05</x1-m>
+			<y1-m>0.45</y1-m>
+			<z1-m>1.11</z1-m>   
+			<x2-m>-3.06</x2-m>
+			<y2-m>0.39</y2-m>
+			<z2-m>1.07</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>right-low-strut2</object-name>
+		<object-name>right-up-strut2</object-name>
+		<property>gear/gear[1]/position-norm</property>
+		<factor>-40</factor>
+		<offset-deg>40</offset-deg>
+		<axis>   
+			<x1-m>-2.45</x1-m>
+			<y1-m>0.76</y1-m>
+			<z1-m>0.60</z1-m>
+			<x2-m>-2.45</x2-m>
+			<y2-m>0.70</y2-m>
+			<z2-m>0.58</z2-m>
+		</axis>
+	</animation>
+	
+	<!-- tail gear -->
+	
+	<animation>
+		<type>select</type>
+		<object-name>tail-wheel</object-name>
+		<object-name>tail-strut1</object-name>
+		<object-name>tail-strut2</object-name>
+		<object-name>tail-axis</object-name>
+		<object-name>tail-ring</object-name>
+		<condition>
+			<greater-than>
+				<property>gear/gear[2]/position-norm</property>
+				<value>0.0</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>tail-wheel</object-name>
+		<object-name>tail-strut1</object-name>
+		<object-name>tail-strut2</object-name>
+		<object-name>tail-axis</object-name>
+		<object-name>tail-ring</object-name>
+		<property>gear/gear[2]/position-norm</property>
+		<factor>-120</factor>
+		<offset-deg>120</offset-deg>
+		<axis>
+			<x1-m>4.30</x1-m>
+			<y1-m>-0.05</y1-m>
+			<z1-m>1.03</z1-m>   
+			<x2-m>4.30</x2-m>
+			<y2-m>0.05</y2-m>
+			<z2-m>1.03</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>tail-strut2</object-name>
+		<property>gear/gear[2]/position-norm</property>
+		<factor>-90</factor>
+		<offset-deg>90</offset-deg>
+		<axis>   
+			<x1-m>4.47</x1-m>
+			<y1-m>0.05</y1-m>
+			<z1-m>0.59</z1-m>
+			<x2-m>4.47</x2-m>
+			<y2-m>-0.05</y2-m>
+			<z2-m>0.59</z2-m>
+		</axis>
+	</animation>
+	
+<!-- rotors -->	
+	
+	<!-- main rotor -->
+	
+	<animation>
+		<name>mainrotors</name>
+		<object-name>blade1</object-name>
+		<object-name>blade2</object-name>
+		<object-name>blade3</object-name>
+		<object-name>blade4</object-name>
+		<object-name>blade5</object-name>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>mainrotors</object-name>
+		<condition>
+			<less-than>
+				<property>/rotors/main/rpm</property>
+				<value>175</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rotor-axis</object-name>
+		<object-name>mainrotors</object-name>
+    	<object-name>blurred1</object-name>
+    	<object-name>blurred2</object-name>
+    	<object-name>blurred3</object-name>
+    	<object-name>blurred4</object-name>
+    	<object-name>blurred5</object-name>
+    	<condition>
+			<not>
+				<property>sim/crashed</property>
+				<value type="bool">true</value>
+			</not>
+		</condition>
+		<offset-deg>5</offset-deg>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>-1.10</x-m>
+			<y-m>0.00</y-m>
+			<z-m>3.36</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rotor-axis</object-name>
+		<object-name>mainrotors</object-name>
+		<object-name>blurred1</object-name>
+    	<object-name>blurred2</object-name>
+    	<object-name>blurred3</object-name>
+    	<object-name>blurred4</object-name>
+    	<object-name>blurred5</object-name>
+    	<condition>
+			<not>
+				<property>sim/crashed</property>
+				<value type="bool">true</value>
+			</not>
+		</condition>
+		<property>rotors/main/blade[0]/position-deg</property>
+		<factor>1</factor>
+		<offset-deg>0</offset-deg>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>-1.10</x-m>
+			<y-m>0.00</y-m>
+			<z-m>3.36</z-m>
+		</center>
+	</animation>
+	
+<animation>
+		<type>rotate</type>
+		<object-name>blurred1</object-name>
+		<property>/rotors/main/cone-deg</property>
+		<factor>0.5</factor>
+		<axis>
+			<x1-m>-6.8042</x1-m>
+			<y1-m>0.0000</y1-m>
+			<z1-m>3.3595</z1-m>
+			<x2-m>-1.1000</x2-m>
+			<y2-m>0.0000</y2-m>
+			<z2-m>3.3595</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>blurred2</object-name>
+		<property>/rotors/main/cone-deg</property>
+		<factor>0.5</factor>
+		<axis>
+			<x1-m>-2.8627</x1-m>
+			<y1-m>0.531</y1-m>
+			<z1-m>5.4549</z1-m>
+			<x2-m>-1.1000</x2-m>
+			<y2-m>0.0000</y2-m>
+			<z2-m>3.3595</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>blurred3</object-name>
+		<property>/rotors/main/cone-deg</property>
+		<factor>0.5</factor>
+		<axis>
+			<x1-m>3.5148</x1-m>
+			<y1-m>3.3713</y1-m>
+			<z1-m>3.3595</z1-m>
+			<x2-m>-1.1000</x2-m>
+			<y2-m>0.0000</y2-m>
+			<z2-m>3.3595</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>blurred4</object-name>
+		<property>/rotors/main/cone-deg</property>
+		<factor>0.5</factor>
+		<axis>
+			<x1-m>3.5148</x1-m>
+			<y1-m>-3.3713</y1-m>
+			<z1-m>3.3595</z1-m>
+			<x2-m>-1.1000</x2-m>
+			<y2-m>0.0000</y2-m>
+			<z2-m>3.3595</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>blurred5</object-name>
+		<property>/rotors/main/cone-deg</property>
+		<factor>0.5</factor>
+		<axis>
+			<x1-m>-2.8627</x1-m>
+			<y1-m>-5.4549</y1-m>
+			<z1-m>3.3595</z1-m>
+			<x2-m>-1.1000</x2-m>
+			<y2-m>0.0000</y2-m>
+			<z2-m>3.3595</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>rotor-axis</object-name>
+		<object-name>mainrotors</object-name>
+		<object-name>blurred1</object-name>
+    	<object-name>blurred2</object-name>
+    	<object-name>blurred3</object-name>
+    	<object-name>blurred4</object-name>
+    	<object-name>blurred5</object-name>
+    	<condition>
+			<not>
+				<property>sim/crashed</property>
+				<value type="bool">true</value>
+			</not>
+		</condition>
+		<property>rotors/main/rpm</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>-1.10</x-m>
+			<y-m>0.00</y-m>
+			<z-m>3.36</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>blurred1</object-name>
+		<object-name>blurred2</object-name>
+		<object-name>blurred3</object-name>
+		<object-name>blurred4</object-name>
+		<object-name>blurred5</object-name>
+		<transparency>
+		<alpha-prop>rotors/main/rpm</alpha-prop>
+		<factor>0.004</factor>
+		<offset>-0.25</offset>
+		<max>0.4</max>
+		</transparency>
+		<threshold>0.001</threshold>
+	</animation>
+	
+	<!-- tail rotor -->	
+	
+	<animation>
+		<type>select</type>
+		<object-name>tail-rotor</object-name>
+		<condition>
+			<less-than>
+				<property>rotors/tail/rpm</property>
+				<value>201</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>tail-rotor-disc</object-name>
+		<object-name>tail-rotor</object-name>
+		<condition>
+			<not>
+				<property>sim/crashed</property>
+				<value type="bool">true</value>
+			</not>
+		</condition>
+		<factor>1</factor>
+		<property>rotors/tail/rpm</property>
+		<axis> 
+		<x1-m>5.4773</x1-m>
+		<y1-m>0.3254</y1-m>
+		<z1-m>1.5863</z1-m>
+		<x2-m>5.4773</x2-m>
+		<y2-m>-0.3840</y2-m>
+		<z2-m>1.5312</z2-m>
+		</axis> 
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>tail-rotor-disc</object-name>
+		<transparency>
+		<alpha-prop>rotors/tail/rpm</alpha-prop>
+		<factor>0.0015</factor>
+		<offset>-0.2</offset>
+		<max>0.55</max>
+		</transparency>
+		<threshold>0.001</threshold>
+	</animation>
+	
+<!-- lights -->
+
+	<model>
+		<path>Aircraft/rah-66/models/lights/beacon.xml</path>
+		<offsets>
+			<x-m>6.45</x-m>
+			<y-m>0.00</y-m>
+			<z-m>3.51</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/rah-66/models/lights/beacon.xml</path>
+		<offsets>
+			<x-m>-0.89</x-m>
+			<y-m>0.00</y-m>
+			<z-m>0.79</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/rah-66/models/lights/red.xml</path>
+		<offsets>
+			<x-m>-2.80</x-m>
+			<y-m>-0.90</y-m>
+			<z-m>1.62</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/rah-66/models/lights/green.xml</path>
+		<offsets>
+			<x-m>-2.80</x-m>
+			<y-m>0.90</y-m>
+			<z-m>1.62</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/rah-66/models/lights/left-landing.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/rah-66/models/lights/right-landing.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>
+	
+<!-- effects -->
+
+	<model>
+		<name>fire</name>
+		<path>Aircraft/rah-66/models/effects/fire.xml</path>
+		<condition>
+			<equals>
+				<property>sim/crashed</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-1.05</x-m>
+			<y-m> 0.00</y-m>
+			<z-m> 0.75</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<effect>
+		<inherits-from>Aircraft/rah-66/models/effects/bumpspec</inherits-from>
+		<object-name>fuselage</object-name>
+		<object-name>cockpit</object-name>
+		<object-name>cone</object-name>
+		<object-name>stub-wings</object-name>
+		<object-name>arch</object-name>
+		<object-name>pilot-doors</object-name>
+		<object-name>gunner-doors</object-name>
+		<object-name>gun</object-name>
+		<object-name>turret</object-name>
+		<object-name>gear-boxes</object-name>
+		<object-name>antennas</object-name>
+		<object-name>horizontal-stabilizer</object-name>
+		<object-name>winglets</object-name>
+		<object-name>radiators</object-name>
+		<object-name>fenstron</object-name>
+		<object-name>fenstron-rode</object-name>
+		<object-name>left-pylon</object-name>
+		<object-name>right-pylon</object-name>
+		<object-name>left-gear-doors</object-name>
+		<object-name>right-gear-doors</object-name>
+		<object-name>left-tail-gear-doors</object-name>
+		<object-name>right-tail-gear-doors</object-name>
+		<object-name>left-baydoors</object-name>
+		<object-name>right-baydoors</object-name>
+		<object-name>left-landing-light</object-name>
+		<object-name>right-landing-light</object-name>
+		<object-name>left-low-strut1</object-name>
+		<object-name>right-low-strut1</object-name>
+		<object-name>left-low-strut2</object-name>
+		<object-name>right-low-strut2</object-name>
+		<object-name>left-up-strut1</object-name>
+		<object-name>right-up-strut1</object-name>
+		<object-name>left-up-strut2</object-name>
+		<object-name>right-up-strut2</object-name>
+		<object-name>left-up-strut1</object-name>
+		<object-name>tail-strut1</object-name>
+		<object-name>tail-strut2</object-name>
+		<object-name>tail-axis</object-name>
+		<object-name>tail-ring</object-name>
+		<object-name>left-wheel</object-name>
+		<object-name>right-wheel</object-name>
+		<object-name>tail-wheel</object-name>
+		<object-name>radar</object-name>
+		<object-name>rotor-axis</object-name>
+		<object-name>blade1</object-name>
+		<object-name>blade2</object-name>
+		<object-name>blade3</object-name>
+		<object-name>blade4</object-name>
+		<object-name>blade5</object-name>
+		<object-name>tail-rotor</object-name>
+  </effect>
+
+</PropertyList>

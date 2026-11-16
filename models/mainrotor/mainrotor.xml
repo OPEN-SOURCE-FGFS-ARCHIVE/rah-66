@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+		<path>mainhub.ac</path>
+		
+	<!--  blades -->
+
+<model>
+        <name>blade-1</name>
+        <path>Aircraft/rah-66/models/mainrotor/blade1.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>0</heading-deg>
+	  </offsets>
+      
+    </model>	
+
+<model>
+        <name>blade-2</name>
+        <path>Aircraft/rah-66/models/mainrotor/blade2.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>73</heading-deg>
+	  </offsets>
+      
+    </model>	
+	
+	
+	<model>
+        <name>blade-3</name>
+        <path>Aircraft/rah-66/models/mainrotor/blade3.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>146</heading-deg>
+	  </offsets>
+      
+    </model>
+	
+		<model>
+        <name>blade-4</name>
+        <path>Aircraft/rah-66/models/mainrotor/blade4.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>219</heading-deg>
+	  </offsets>
+      
+    </model>
+	
+	
+	
+		<model>
+        <name>blade-5</name>
+        <path>Aircraft/rah-66/models/mainrotor/blade5.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>290</heading-deg>
+	  </offsets>
+      
+    </model>
+
+	
+<!--  REMBRANDT support for transparent objects-->
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+       
+		 <object-name>blurred3</object-name>
+	
+    </effect> 
+
+ <animation>
+<name>rotorcomplete</name>
+ <object-name>radar</object-name>
+  <object-name>cone</object-name>
+  <object-name>rotor-axis</object-name>
+   <object-name>blade-1</object-name>
+  <object-name>blade-2</object-name>
+  <object-name>blade-3</object-name>
+  <object-name>blade-4</object-name>
+   <object-name>blade-5</object-name>
+  </animation>
+
+	 <animation>
+        <type>spin</type>
+       <object-name>rotorcomplete</object-name>
+ 		
+        <property>rotors/main/rpm</property>
+	<factor>1</factor>
+        <center>
+           
+            <x-m> 0.00</x-m>
+            <y-m>-0.00</y-m>
+            <z-m>3.35</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+	  
+        </axis>
+    </animation>
+	
+	
+	
+	
+	
+</PropertyList>
+
+
+

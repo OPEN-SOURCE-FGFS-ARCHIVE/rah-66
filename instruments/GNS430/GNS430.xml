@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<!--texture made by Heiko H. Schulz-->
+	<name>GNS430</name>
+	<path>GNS430.ac</path>
+	
+	 <animation>
+		<type>material</type>
+			<object-name>Cube.001</object-name>
+			
+		<emission>
+			<red>0.28</red>
+			<green>0.40</green>
+			<blue>0.24</blue>
+<factor-prop>controls/lighting/instrument-lights-norm</factor-prop>
+		</emission>
+	</animation>
+	
+	 <animation>
+		<type>material</type>
+			
+			<object-name>ComVLOCkhz.knob</object-name>
+			<object-name>cursor.knob</object-name>
+			<object-name>NavVolume.knob</object-name>
+			<object-name>PwrComVol.knob</object-name>
+			<object-name>ComFlipFlop.btn</object-name>
+			<object-name>cdi.btn</object-name>
+			<object-name>obs.btn</object-name>
+			<object-name>msg.btn</object-name>
+			<object-name>fpl.btn</object-name>
+			<object-name>proc.btn</object-name>
+			<object-name>RangeKeys.btn</object-name>
+			<object-name>directto.btn</object-name>
+			<object-name>menu.btn</object-name>
+			<object-name>clear.btn.001</object-name>
+			<object-name>enter.btn</object-name>
+
+		<condition>
+	<or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+	</animation>
+
+
+
+ <model>
+ <name>screen</name>
+    <path>Aircraft/rah-66/instruments/GNS430/fg1000/GDU-1040.2.xml</path>
+    <offsets>
+      <x-m>0.009</x-m>
+      <y-m>-0.006</y-m>
+       <z-m>0.0</z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.00 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+	<overlay>
+		 <animation n="400">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.0</x-offset>
+    <y-offset>0.48</y-offset>
+      <z-offset>0.35</z-offset>
+   </animation>
+  </overlay>
+  </model>	
+  
+   <animation>
+    <type>select</type>
+   
+    <object-name>screen</object-name>
+  
+    <condition>
+	<or>
+	<equals>
+      <property>controls/electric/engine/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>controls/electric/engine[1]/generator</property>
+	  <value>true</value>
+	  </equals>
+	  <equals>
+      <property>/controls/electric/battery-switch</property>
+	  <value>true</value>
+	  </equals>
+	  </or>
+    </condition>
+	</animation>
+  
+  <!-- buttons and bits -->
+  
+   <animation>
+    <type>knob</type>
+    <object-name>ComVLOCmhz.knob</object-name>
+    <action>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>NAV_VOL</notification>
+        <offset>1</offset>
+      </binding>
+    </action>
+  </animation>
+  
+  
+  <animation>
+    <type>knob</type>
+    <object-name>cursor.knob</object-name>
+    <action>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>HEADING</notification>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/fg1000/screen1/heading-bug-deg</property>
+        <factor>15</factor>
+      </binding>
+    </action>
+    <shift-action>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>HEADING_PRESS</notification>
+      </binding>
+    </shift-action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>HDG</tooltip-id>
+        <label>Change heading bug (Shift to sync)</label>
+      </binding>
+    </hovered>
+  </animation>
+  
+  <animation>
+    <type>knob</type>
+    <object-name>ComVLOCmhz.knob</object-name>
+    <action>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>COM_VOL</notification>
+        <offset>1</offset>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>cdi.btn</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>CRS_CENTER</notification>
+        <offset>1</offset>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>ComInner</tooltip-id>
+        <label>Center CDI on current VOR</label>
+      </binding>
+    </hovered>
+  </animation>
+  
+  
+   <animation>
+    <type>pick</type>
+
+    <object-name>directto.btn</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>DTO</notification>
+        <offset>1</offset>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>DidectTo</tooltip-id>
+        <label>Display Direct To</label>
+      </binding>
+    </hovered>
+  </animation>
+  
+   <animation>
+    <type>pick</type>
+    <object-name>menu.btn</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>MENU</notification>
+        <offset>1</offset>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>MENU</tooltip-id>
+        <label>Display Menu</label>
+      </binding>
+    </hovered>
+  </animation>
+  
+   <animation>
+    <type>pick</type>
+    <object-name>fpl.btn</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>FPL</notification>
+        <offset>1</offset>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>MENU</tooltip-id>
+        <label>Display Flight Plan page</label>
+      </binding>
+    </hovered>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>proc.btn</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>PROC</notification>
+        <offset>1</offset>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>PROC</tooltip-id>
+        <label>Display Procedures page</label>
+      </binding>
+    </hovered>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>clear.btn.001</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>CLR</notification>
+        <offset>1</offset>
+      </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>CLR_HOLD</notification>
+        <offset>1</offset>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>CLR</tooltip-id>
+        <label>Clear entry (Middle mouse button to display Navigation Map)</label>
+      </binding>
+    </hovered>
+  </animation>
+  
+  
+   <animation>
+    <type>pick</type>
+    <object-name>enter.btn</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>FG1000HardKeyPushed</command>
+        <device>1</device>
+        <notification>ENT</notification>
+        <offset>1</offset>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>ENT</tooltip-id>
+        <label>Complete data entry, or confirm selection</label>
+      </binding>
+    </hovered>
+  </animation>
+  
+</PropertyList>

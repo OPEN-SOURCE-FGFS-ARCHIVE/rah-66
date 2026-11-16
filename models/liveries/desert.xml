@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Desert Camo (Iraq) #95-0001</name>
+				<winglets type="bool">false</winglets>
+				<radar type="bool">false</radar>
+				<cone type="bool">true</cone>
+				<stub-wings type="bool">false</stub-wings>
+				<texture>liveries/desert.png</texture>
+			</livery>
+			<livery-logo>
+				<texture>liveries/desert.png</texture>
+			</livery-logo>
+		</model>
+		
+	</sim>
+
+</PropertyList>

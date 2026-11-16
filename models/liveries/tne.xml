@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Test and Evaluation #94-0327</name>
+				<winglets type="bool">true</winglets>
+				<radar type="bool">false</radar>
+				<cone type="bool">true</cone>
+				<stub-wings type="bool">false</stub-wings>
+				<texture>liveries/tne.png</texture>
+			</livery>
+			<livery-logo>
+				<texture>liveries/tne.png</texture>
+			</livery-logo>
+		</model>
+		
+	</sim>
+
+</PropertyList>

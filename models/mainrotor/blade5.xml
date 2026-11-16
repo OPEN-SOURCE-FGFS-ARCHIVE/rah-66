@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+		<path>blademaster.ac</path>
+		
+		
+<animation>
+	<name>bladecomplete</name>
+      <object-name>blade3</object-name>
+      <object-name>blurred3</object-name>
+ 
+     </animation> 
+	
+<!--  REMBRANDT support for transparent objects-->
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+       
+		
+        <object-name>blurred3</object-name>
+		
+    </effect> 
+
+  <!--  <animation>
+	<type>material</type>
+	
+        <object-name>blade3</object-name>
+        
+       
+		<transparency>
+			<alpha-prop>rotors/main/rpm</alpha-prop>
+			<factor>-0.09</factor>
+			<offset>1</offset>
+			<max>1</max>
+		</transparency>
+    </animation>-->
+
+	
+	<animation>
+        <type>select</type>
+       
+        <object-name>blade3</object-name>
+     
+		
+        <condition>
+            <less-than>
+                <property>rotors/main/rpm</property>
+                <value>201</value>
+            </less-than>
+        </condition>
+    </animation>
+	
+	 <animation>
+        <type>select</type>
+   
+		
+		 <object-name>blurred3</object-name>
+	
+		
+        <condition>
+            <greater-than>
+                <property>rotors/main/rpm</property>
+                <value>180.999</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+	
+	
+	<!--  Blade 1-->
+
+
+
+    <animation>
+        <type>rotate</type>
+       <object-name>blade3</object-name>
+        
+	   
+        
+        <property>rotors/main/blade[4]/incidence-deg</property>
+	<factor>1</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+             <z-m>3.35</z-m>
+        </center>
+        <axis>
+            <x>1.0</x>
+            <y>-0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+	
+	
+	 
+	
+   
+	
+		
+	
+</PropertyList>
+
+
+

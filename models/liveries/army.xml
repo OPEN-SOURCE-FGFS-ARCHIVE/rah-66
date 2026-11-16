@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Army Camo</name>
+				<winglets type="bool">true</winglets>
+				<radar type="bool">true</radar>
+				<cone type="bool">false</cone>
+				<stub-wings type="bool">false</stub-wings>
+				<texture>liveries/army.png</texture>
+			</livery>
+			<livery-logo>
+				<texture>Liveries/army.png</texture>
+			</livery-logo>
+		</model>
+		
+	</sim>
+
+</PropertyList>
