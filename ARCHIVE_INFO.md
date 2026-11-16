@@ -1,44 +1,38 @@
-# Open Source FlightGear Archive: rah-66 - FGUK
+# Open Source FlightGear Archive: rah-66
 
-> **Archival Date:** 15.11.2026
+> Archival Date: 15.11.2026
 
-> **Source Origin:** Recovered from https://sites.google.com/view/fgukhangar/flightgear-uk-home-page/hangar/rotary-wing
+> Source Origin: Recovered from https://sites.google.com/view/fgukhangar/flightgear-uk-home-page/hangar
+
+This item is part of the **[Open Source FlightGear Archive](https://github.com/OPEN-SOURCE-FGFS-ARCHIVE/)**, which preserves FlightGear aircraft, addons, materials and assets with genuine adherence to open-source principles and proper version-control (DVCS) history, where centralized or restricted distribution attempts have obscured it.
+
+Run by **SP-NTX** - sp.ntx.flightgear@gmail.com
 
 ---
 
-### Open Source FlightGear Archive
+## Provenance
 
-This repository is part of the **Open-Source FGFS Archive**, dedicated to preserving FlightGear aircraft add-ons, materials, assets, ensuring genuine adherence to open-source software principles, and maintaining proper version control history (DVCS) where centralized or restricted distribution attempts to obscure it.
+- **Checksum of downloaded zip (SHA-256):** `cde5974ece3d00819ff13ada0ea6100395297e53c72ff00d795a52b823bdf2f6`
 
-Open Source FlightGear Archive is run by SP-NTX, sp.ntx.flightgear@gmail.com
+---
 
-Available at [https://github.com/OPEN-SOURCE-FGFS-ARCHIVE/](https://github.com/OPEN-SOURCE-FGFS-ARCHIVE/)
+## Licensing & Compliance
 
-### Licensing & Compliance
+- **Original Code & Derivatives:** GNU GPL (or compatible upstream terms).
+- **License declared by GitHub:** GNU General Public License v3.0 (`GPL-3.0`)
+- **Archiving basis:** Archived under the Archive's rules: GNU GPL only, no CC-licensed content.
+- **Attribution:** All original authors, modellers, FDM and systems contributors retain full credit. Author names, commit history and provenance are preserved unchanged.
 
-- **Original Code & Derivatives:** Licensed under the terms of the **GNU General Public License v3 (GPL-3)** (or compatible terms matching original upstream contributions).
+---
 
-- **Attribution:** All original authors, 3D modelers, FDM developers, and system contributors retain full credit. This repository does not strip author names, hide commit histories, or obscure provenance.
+## Mirror Status & Disclaimer
 
-### Notice to Upstream Maintainers
+This is a passive mirror of publicly available third-party material. The archive maintainer is not the author of the content and does not audit it file by file. Files are provided **"AS IS"**, without warranty of any kind, including merchantability, fitness for a particular purpose and non-infringement. To the extent permitted by law, the maintainer is not liable for damages arising from their use.
 
-If code or assets originating from GPL-licensed projects are utilized, the terms of the GPL must be respected globally, not selectively.
+---
 
-### Indemnification & Limitation of Liability (Mirror Status)
+## Copyright Infringement & Takedown Policy
 
-BY ACCESSING, DOWNLOADING, OR USING THIS REPOSITORY, YOU ACKNOWLEDGE AND AGREE TO THE FOLLOWING:
+Verified removal requests: sp.ntx.flightgear@gmail.com OR an Issue on this GitHub repository. Please include the affected files and proof of ownership. Requests will be reviewed and answered within 31 days.
 
-#### Passive Mirroring & No Culpability
-This repository acts strictly as a passive mirror and archival backup of publicly available third-party materials. The archive maintainer (SP-NTX) did not author, modify, curate individual asset contents, or audit the underlying code, 3D models, textures, or audio files contained herein.
-
-#### Transfer of Liability to Original Author/Publisher
-All legal liability, copyright compliance obligations, and claims regarding intellectual property infringement, licensing breaches, or unauthorized use of proprietary third-party assets lie entirely with the original author, creator, and upstream distributor (the maintainers of the original FGUK repository/source) who packaged and published the content prior to this archive.
-
-#### "AS-IS" Warranty Disclaimer
-The archived files are provided "AS IS", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the archive maintainer be held liable for any direct, indirect, incidental, special, exemplary, or consequential damages arising out of the use of this software.
-
-### Copyright Infringement & Takedown Policy
-
-If you are an original author, copyright holder, or legal representative and believe that material you own has been improperly distributed, relicensed, or included without authorization within the original source repository that was mirrored here, please note that this archive merely reflects upstream availability.
-
-However, to assist rights holders, valid removal or compliance requests can be directed to sp.ntx.flightgear@gmail.com. Upon receipt of a verified notice demonstrating ownership, the mirrored assets in question will be evaluated for removal or redaction from this public archive.
+<!-- generated-by: fgfs-archive-tool -->
